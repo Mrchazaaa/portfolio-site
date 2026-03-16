@@ -1,0 +1,8 @@
+baseURL = "https://charliehowlett.co.uk/"
+languageCode = "en-gb"
+title = "Charlie Howlett"
+theme = "hugo-teletext"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+
+[params]
+  pageNumber = "P100"

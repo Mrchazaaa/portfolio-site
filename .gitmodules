@@ -1,0 +1,3 @@
+[submodule "themes/hugo-teletext"]
+	path = themes/hugo-teletext
+	url = https://github.com/Mrchazaaa/hugo-teletext
