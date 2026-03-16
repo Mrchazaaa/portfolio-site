@@ -1,8 +1,11 @@
 baseURL = "https://charliehowlett.co.uk/"
 languageCode = "en-gb"
 title = "Charlie Howlett"
-theme = "hugo-teletext"
 disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+
+[module]
+  [[module.imports]]
+    path = "github.com/mrchazaaa/hugo-teletext"
 
 [params]
   pageNumber = "P100"
