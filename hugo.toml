@@ -9,3 +9,4 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 
 [params]
   enableScanlines = true
+  pageNumber = "100"
