@@ -8,4 +8,4 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
     path = "github.com/mrchazaaa/hugo-teletext"
 
 [params]
-  pageNumber = "P100"
+  pageNumber = "100"
