@@ -8,4 +8,5 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
     path = "github.com/mrchazaaa/hugo-teletext"
 
 [params]
+  enableScanlines = true
   pageNumber = "100"
