@@ -1,0 +1,15 @@
+{{ $src := .Get "src" }}
+{{ $title := .Get "title" | default "Embedded sketch" }}
+{{ $height := .Get "height" | default "420px" }}
+{{ if not $src }}
+  {{ errorf "sketchframe shortcode requires a 'src' parameter: %s" .Position }}
+{{ end }}
+
+<iframe
+  class="sketch-frame"
+  src="{{ $src | relURL }}"
+  title="{{ $title }}"
+  loading="lazy"
+  style="--sketch-frame-height: {{ $height }};"
+  allowfullscreen>
+</iframe>
