@@ -1,0 +1,14 @@
+.post-body img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sketch-frame {
+  width: min(100%, 720px);
+  height: var(--sketch-frame-height, 420px);
+  margin: 0.35rem auto;
+  border: 3px solid #0a39ff;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0a39ff 0%, #0a39ff 58%, #7bbcff 100%);
+  display: block;
+}
