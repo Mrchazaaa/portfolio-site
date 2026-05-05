@@ -1,7 +1,7 @@
 ---
 title: "Procedurally Generated Clouds"
 date: 2024-03-04
-description: "I built a p5.js sky sketch and embedded it here as a small standalone scene."
+description: "A p5.js sketch featured on earlier iterations of my personal site's landing page."
 pageNumber: "202"
 ---
 
