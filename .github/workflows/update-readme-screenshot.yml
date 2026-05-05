@@ -1,0 +1,57 @@
+name: Update README Screenshot
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-screenshot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.123.7"
+          extended: true
+
+      - name: Build site
+        run: hugo
+
+      - name: Serve generated site
+        run: |
+          python3 -m http.server 1313 --directory public > /tmp/hugo-server.log 2>&1 &
+          for attempt in $(seq 1 10); do
+            if curl --silent --fail http://127.0.0.1:1313/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/hugo-server.log
+          exit 1
+
+      - name: Update README screenshot
+        uses: Mrchazaaa/update-screenshots-action@v1
+        with:
+          url: http://127.0.0.1:1313/
+          image_path: assets/screenshots/home.png
+          readme_path: README.md
+          viewport_width: "1440"
+          viewport_height: "900"
+          delay_ms: "1000"
+          commit_message: chore: update README screenshot
