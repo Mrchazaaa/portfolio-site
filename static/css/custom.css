@@ -3,6 +3,29 @@
   margin-right: auto;
 }
 
+.image-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.image-pair__item {
+  margin: 0;
+}
+
+.image-pair__item img {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .image-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
 .sketch-frame {
   width: min(100%, 720px);
   height: var(--sketch-frame-height, 420px);

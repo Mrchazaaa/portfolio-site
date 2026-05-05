@@ -1,0 +1,21 @@
+{{ $leftSrc := .Get "leftSrc" }}
+{{ $rightSrc := .Get "rightSrc" }}
+{{ $leftAlt := .Get "leftAlt" }}
+{{ $rightAlt := .Get "rightAlt" }}
+{{ $left := .Page.Resources.GetMatch $leftSrc }}
+{{ $right := .Page.Resources.GetMatch $rightSrc }}
+{{ if not $left }}
+  {{ errorf "imagepair shortcode could not find leftSrc %q: %s" $leftSrc .Position }}
+{{ end }}
+{{ if not $right }}
+  {{ errorf "imagepair shortcode could not find rightSrc %q: %s" $rightSrc .Position }}
+{{ end }}
+
+<div class="image-pair">
+  <figure class="image-pair__item">
+    <img src="{{ $left.RelPermalink }}" alt="{{ $leftAlt }}">
+  </figure>
+  <figure class="image-pair__item">
+    <img src="{{ $right.RelPermalink }}" alt="{{ $rightAlt }}">
+  </figure>
+</div>
