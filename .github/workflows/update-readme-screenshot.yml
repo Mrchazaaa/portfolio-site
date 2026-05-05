@@ -54,4 +54,4 @@ jobs:
           viewport_width: "1440"
           viewport_height: "900"
           delay_ms: "1000"
-          commit_message: chore: update README screenshot
+          commit_message: "chore: update README screenshot"
