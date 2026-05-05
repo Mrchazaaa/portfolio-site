@@ -1,16 +1,21 @@
 ---
 title: "Procedurally Generated Clouds"
 date: 2024-03-04
-description: "I embedded a standalone p5.js sky sketch as an isolated static scene inside this blog."
+description: "I built a p5.js sky sketch and embedded it here as a small standalone scene."
 pageNumber: "202"
 ---
 
-I originally built this animated sky scene during university and recently refactored it into a small standalone static project. It now lives as plain HTML, CSS, and JavaScript, which makes it much easier to reuse without dragging a larger app structure in behind it.
+I first started thinking about building a personal site during my time at university. From the start, I knew I wanted a landing page that felt unique and a little artistic. So in 2019 I built a simple single-page app featuring the animated scene below, rendered in p5.js, with procedurally generated clouds drifting through the sky.
 
 {{< sketchframe src="sketches/sky-p5/index.html" title="Sky p5.js sketch" height="340px" >}}
 
-For this version of the post I kept the sketch isolated and served it as its own static bundle inside the Hugo site. That means the blog page does not need to load the sketch's CSS into the teletext theme or share runtime state with the sketch itself.
+[Fullscreen](/sketches/sky-p5/index.html)
 
-I still find that kind of reduction useful. A lot of engineering work gets buried under framework structure, deployment details, and product constraints. Pulling out the smallest interesting part is a good way to check whether the core idea is actually solid and whether it can survive outside the original project it came from.
+What I liked most about this project was turning something that looks soft and unpredictable into a repeatable algorithm. Each cloud is generated from code rather than drawn by hand, which meant every run could produce a slightly different scene while still feeling coherent. I later expanded the sketch with mountains, a moon, stars, and a dark/light mode switcher to make the whole scene feel more complete.
 
-This sketch is a good example of how I tend to work on side projects: build broadly enough to explore, then come back later and separate the durable parts from the scaffolding around them.
+I found the application-level code interesting, but the project also taught me a lot about publishing a site. It gave me an early chance to explore domain name registration, CI/CD pipelines, and content delivery networks.
+
+My personal site has changed a lot since then, and this scene no longer sits on the landing page, but I still look back on it fondly as one of my earliest web projects.
+
+
+[Visit the project on GitHub](https://github.com/Mrchazaaa/sky-p5-sketch)
