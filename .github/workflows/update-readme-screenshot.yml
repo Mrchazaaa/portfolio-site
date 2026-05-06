@@ -34,24 +34,17 @@ jobs:
         run: hugo
 
       - name: Serve generated site
-        run: |
-          python3 -m http.server 1313 --directory public > /tmp/hugo-server.log 2>&1 &
-          for attempt in $(seq 1 10); do
-            if curl --silent --fail http://127.0.0.1:1313/ > /dev/null; then
-              exit 0
-            fi
-            sleep 1
-          done
-          cat /tmp/hugo-server.log
-          exit 1
+        run: python3 -m http.server 1313 --directory public > /tmp/hugo-server.log 2>&1 &
 
       - name: Update README screenshot
-        uses: Mrchazaaa/update-screenshots-action@v1.1.0
+        uses: Mrchazaaa/update-screenshots-action@v1.2.0
         with:
           url: http://127.0.0.1:1313/
           image_path: assets/screenshots/home.png
           readme_path: README.md
           viewport_width: "1440"
           viewport_height: "900"
+          navigation_retries: "10"
+          navigation_retry_delay_ms: "1000"
           delay_ms: "1000"
           commit_message: "chore: update README screenshot"
