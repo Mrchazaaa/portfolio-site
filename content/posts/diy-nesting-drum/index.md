@@ -2,7 +2,7 @@
 title: "Refurbishing A Bass Drum Into A Nesting Kit"
 date: 2025-06-16
 description: "Converting a cheap old bass drum into a nesting drum."
-pageNumber: "203"
+pageNumber: "208"
 ---
 
 As an amateur drummer, I often play shows where I have to bring my own drum kit to the venue, which is particularly challenging because I do not have a car. Loading a full-size kit in and out of gigs is labour intensive, and the idea of taking one on the Underground is unrealistic.

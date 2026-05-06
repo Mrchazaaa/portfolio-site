@@ -1,8 +1,8 @@
 ---
 title: "Procedurally Generated Clouds"
-date: 2024-03-04
+date: 2019-03-04
 description: "A p5.js sketch featured on earlier iterations of my personal site's landing page."
-pageNumber: "202"
+pageNumber: "203"
 ---
 
 I first started thinking about building a personal site during my time at university. From the start, I knew I wanted a landing page that felt unique and a little artistic. So in 2019 I built a simple single-page app featuring the animated scene below, rendered in p5.js, with procedurally generated clouds drifting through the sky.

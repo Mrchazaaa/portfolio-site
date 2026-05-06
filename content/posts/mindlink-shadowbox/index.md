@@ -2,7 +2,7 @@
 title: "Framing Six Years At MindLink"
 date: 2025-07-04
 description: "A keepsake display I built after six years at MindLink."
-pageNumber: "201"
+pageNumber: "209"
 ---
 
 For software engineers, the ethereal nature of our work often means we're left without many physical reminders that it ever happened. That can make it surprisingly hard to look back and celebrate what we've actually done, especially after constantly moving from one project to the next. I've certainly felt that myself, so I've made a point of holding on to a few keepsakes over the years. After finding several of them during a recent spring clean, I decided to turn them into a display for my office shelf.
